@@ -1,17 +1,37 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import coffee.order.CoffeeOrderBoard;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        CoffeeOrderBoard orderBoard = new CoffeeOrderBoard();
+        orderBoard.add("Yoda");
+        orderBoard.add("Alen");
+        orderBoard.add("John Snow");
+        orderBoard.add("David White");
+        orderBoard.add("Alice Miracle");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        orderBoard.draw();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        orderBoard.deliver();
+
+        orderBoard.draw();
+
+        orderBoard.deliver(4);
+
+        orderBoard.draw();
+
+        orderBoard.add("Katrin Bell");
+        orderBoard.add("Philip Fox");
+        orderBoard.add("Charlie Ben");
+        orderBoard.add("David Clark");
+
+        orderBoard.draw();
+        orderBoard.deliver();
+        orderBoard.draw();
+
+        orderBoard.deliver(7);
+        orderBoard.draw();
+
+        orderBoard.deliver(55);
+        orderBoard.draw();
     }
 }
